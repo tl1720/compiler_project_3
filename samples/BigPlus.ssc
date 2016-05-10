@@ -1,0 +1,5 @@
+/* Very long addition. */
+function main(n: number) : number {
+ return n+(n+(n+(n+(n+(n+(n+(n+(n+(n+(n+(n+(n+(n+(n+(n+n)))))))))))))));
+}
+document.body.innerHTML = "" + main(42);

@@ -1,0 +1,3 @@
+function less(x: number, y: number): boolean { return (x < y); }
+function lesser(x: number, y: number, compare: (number, number)=>boolean): number { if (compare(x,y)) return x; else return y; }
+document.body.innerHTML = "Smaller of 3,2 is " + lesser(3, 2, less);

@@ -1,0 +1,18 @@
+interface Cartesian {
+  x: number;
+  y: number;
+  vector(a: Cartesian, b: Cartesian) : Cartesian {
+    var v: Cartesian;
+    v = { x: b.x - a.x, y: b.y - a.y };
+    return v;
+  }
+}
+
+function main(): string {
+  var a: Cartesian; a = {x:1, y:-1};
+  var b: Cartesian; b = {x:2, y:2};
+  var c: Cartesian; c = a.vector(a, b);
+  return "Vector ("+c.x+","+c.y+")";
+}
+
+document.body.innerHTML = main();

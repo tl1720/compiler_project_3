@@ -1,0 +1,25 @@
+document.body.innerHTML = "Fibonacci of 5 is " + fastfib(5) + ".";
+
+// setup and use a fast memoizing algorithm
+function fastfib(n: number): number {
+  var pair: Pair;
+  pair = {fst:0, snd:1};
+  return fastfib2(n, pair);
+}
+
+// with two most recent results compute the next
+function fastfib2(n: number, recent: Pair): number {
+  if (n<=0) return recent.snd;
+  else {
+    var next: Pair;
+    next.fst = recent.snd;
+    next.snd = recent.fst+recent.snd;
+    return fastfib2(n-1, next);
+  }
+}
+
+// helper structure to collect pairs of numbers
+interface Pair {
+  fst: number;
+  snd: number;
+}

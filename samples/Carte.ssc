@@ -1,0 +1,11 @@
+interface Cartesian {
+  x: number;
+  y: number;
+}
+
+function main(): string {
+  var a: Cartesian; a = {x:1, y:2};
+  return "Vector ("+a.x+","+a.y+")";
+}
+
+document.body.innerHTML = main();

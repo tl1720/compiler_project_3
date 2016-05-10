@@ -1,0 +1,6 @@
+interface Person {
+    name: string;
+}
+var jane : Person;
+jane = {name: "Jane"};
+document.body.innerHTML = "Hello, " + jane.name;

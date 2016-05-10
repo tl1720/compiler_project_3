@@ -1,0 +1,7 @@
+function main(): string {
+ var one: string; one = "111'\"";
+ var two:  string; two = '2\x082"\'';
+ var three: string; three = "";
+ return one + two + three;
+}
+document.body.innerHTML = main();

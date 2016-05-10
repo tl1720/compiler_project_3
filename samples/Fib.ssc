@@ -1,0 +1,5 @@
+/* This function computes the n'th fibonacci number the old and slow way. */
+function fib(n: number): number {
+  return n >= 0 ? fib(n-2)+fib(n-1) : 0;
+}
+document.body.innerHTML = "Fibonacci of 5 is " + fib(5) + ".";
